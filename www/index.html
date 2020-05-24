@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset='utf-8' />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!--Core Js Libraries-->
+  <script type="text/javascript" src="js/bin/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="js/bin/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/vue/vue.min.js"></script>
+  <script type="text/javascript" src="js/bin/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" src="js/bin/dataTables.bootstrap4.min.js"></script>
+  <!--Core Css Files-->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/dataTables.bootstrap4.min.css" />
+
+  <!--Custom Css-->
+  <link rel="stylesheet" href="css/index.css" />
+ </head>
+ <body>
+  <div id="app">
+   <header-nav></header-nav>
+   <div id="mainContainer" class="container-fluid">
+    <div class="row main-row ml-1 mr-1">
+      <!--DataTable Here-->
+      <main-body></main-body>
+    </div>
+   </div>
+  </div>
+ </body>
+ <!--Custom Js Script Here-->
+ <script type="text/javascript" src="js/pagIndex.js"></script>
+ <script type="text/javascript" src="js/header.js"></script>
+ <script type="text/javascript" src="js/dataTables.js"></script>
+ <script type="text/javascript" src="js/items.js"></script>
+ <script type="text/javascript" src="js/warehouses.js"></script>
+ <script type="text/javascript" src="js/storages.js"></script>
+ <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+ <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+ <script type="text/javascript">
+ // Initialize the Vue element as the core
+ var app = new Vue({
+  el: '#app',
+  data: {
+   systemName: 'WareHouse Manager',
+  },
+  mounted: function(){
+  }
+ });
+ var login_checkbox;
+ // call reCAPTCHA API
+ var onloadCallback = function() {
+    login_checkbox = grecaptcha.render('login_reCAPTCHA', {
+      'sitekey' : '6LfgzZ4UAAAAAO2iN9xVgIS6vNJpedZfSuNbGo6D',
+      'callback' : function(response){
+        eventHub.$emit('login_reCAPTCHA');
+      }
+    });
+ }
+ </script>
+</html>

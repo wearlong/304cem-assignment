@@ -1,0 +1,53 @@
+nav.navbar{
+ background: linear-gradient(white, white, white, lightgrey, grey);
+}
+div.navbar-header button, div.navbar-header p{
+ margin-left: 5px;
+}
+.note
+{
+    text-align: center;
+    height: 80px;
+    background: -webkit-linear-gradient(left, #0072ff, #8811c5);
+    color: #fff;
+    font-weight: bold;
+    line-height: 80px;
+}
+.form-content
+{
+    padding: 5%;
+    border: 1px solid #ced4da;
+    margin-bottom: 2%;
+}
+.form-control{
+    border-radius: 1.5rem;
+}
+
+.btnSubmit
+{
+    border:none;
+    border-radius:1.5rem;
+    padding: 1%;
+    width: 20%;
+    cursor: pointer;
+    background: #0062cc;
+    color: #fff;
+}
+
+#app{height: 100vh;}
+#mainContainer{height: 90vh; overflow-y: scroll;}
+#mainContainer div.main-row{max-height: 33vh;}
+.dataTable {width:100%;}
+.dataTable tbody tr:hover{background: #dfdfdf;}
+.dataTables_wrapper{width: 95%;}
+.dataTables_wrapper div.row:nth-child(2){
+    height: 400px;
+    overflow-y:auto;
+}
+.panelToggle{
+    background-image: url('../img/icon_setting.png');
+    background-color: lightblue;
+}
+.panelToggle:hover{
+    opacity: 0.7;
+}
